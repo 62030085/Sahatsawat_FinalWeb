@@ -1,0 +1,131 @@
+body{
+    background-color: #474747;
+}
+
+header{
+    text-align: center;
+    flex: 1 100%;
+    background-color: #320eff;
+    padding: 5px;
+    color: rgb(0, 0, 0);
+    font-size: 2em;
+}
+
+nav{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    background-color: #73bdfa;
+    margin: 5px 0px;
+    padding: 5px;
+    flex: 1 100%;
+    font-size: 1.7em;
+    text-align: center;
+}
+
+div{
+    font-size: 1em;
+    margin: 0px 15px;
+}
+
+#photo {
+    grid-area: main1;
+    background-color: #e2d0ff;
+}
+
+.imageMe{
+    width: 430px;
+    height: 300px;
+    margin: 20px;
+}
+
+#infoMe {
+    grid-area: main2;
+    background-color: #adaee9;
+}
+
+h2{
+    font-size: 1.8em;
+    text-align: left;
+    margin: 10px 10px;
+    color: #8073f3;
+}
+
+p{
+    font-size: 1.5em;
+    padding: 0px 20px;
+}
+
+#contact{
+    font-size: 1em;
+    background-color: #d2b5ff;
+}
+
+footer{
+    grid-area: footer;
+    line-height: 50px;
+    background-color: #393263;
+    text-align: center;
+    flex: 1 100%;
+    color: rgb(232, 221, 253);
+}
+
+article{
+    display: grid;
+    gap: 10px;
+    margin: 0px 0px;
+    grid-template-areas:
+    'main1 main2 main3'
+    'footer footer footer'
+}
+
+@media screen and (max-width: 1000px){
+    .imageMe{
+        text-align: center;
+        width: 300px;
+        height: 200px;
+        margin: 10px;
+    }
+    article{
+        display: grid;
+        gap: 5px;
+        margin: 0px 0px;
+        grid-template-areas:
+        'main1 main2'
+        'main3 main3'
+        'footer footer'
+    }
+    
+    
+    
+}
+@media screen and (max-width: 800px){
+    header{
+        flex: 1 100%;
+        background-color: #320eff;
+        padding: 1px;
+        text-align: center;
+        font-size: 1em;
+    }
+    #photo {
+        grid-area: main1;
+        text-align: center;
+    }
+    .imageMe{
+        grid-area: main2;
+        text-align: center;
+        width: 300px;
+        height: 200px;
+        margin: 10px;
+    }
+    article{
+        display: grid;
+        gap: 3px;
+        margin: 0px 0px;
+        grid-template-areas:
+        'main1'
+        'main2'
+        'main3'
+        'footer'
+    }
+}
+
